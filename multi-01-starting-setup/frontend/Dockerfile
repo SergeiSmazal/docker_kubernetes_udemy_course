@@ -1,13 +1,13 @@
- FROM node
+FROM node
 
- WORKDIR /app
+WORKDIR /app
 
- COPY package.json .
+COPY package.json .
 
- RUN npm install
+RUN npm install
 
- COPY . .
+COPY . .
 
- CMD ["npm", "start"]
+EXPOSE 3000
 
- EXPOSE 3000
+CMD [ "npm", "start" ]
